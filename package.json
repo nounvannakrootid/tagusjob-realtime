@@ -4,7 +4,8 @@
   "description": "This socket.io of my TagUsJob.com",
   "main": "socket.js",
   "scripts": {
-    "test": "echo \"\"\u001b[DError: no test specified\""
+    "test": "echo \"\"\u001b[DError: no test specified\"",
+    "start": "node socket.js"
   },
   "repository": {
     "type": "git",
