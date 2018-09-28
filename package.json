@@ -1,0 +1,31 @@
+{
+  "name": "tagusjob-realtime",
+  "version": "1.0.0",
+  "description": "This socket.io of my TagUsJob.com",
+  "main": "socket.js",
+  "scripts": {
+    "test": "echo \"\"\u001b[DError: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NounVannakGitHub/tagusjob-realtime.git"
+  },
+  "keywords": [
+    "TagUsJob",
+    "Realtime"
+  ],
+  "author": "Vannak Noun",
+  "license": "MIT",
+  "engines": {
+    "node": "4.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/NounVannakGitHub/tagusjob-realtime/issues"
+  },
+  "homepage": "https://github.com/NounVannakGitHub/tagusjob-realtime#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
+  }
+}

@@ -1,7 +1,7 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var request = require("request");
+// var request = require("request");
 const bodyParser = require("body-parser");
 
 /** bodyParser.urlencoded(options)
