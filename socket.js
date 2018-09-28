@@ -51,6 +51,11 @@ function updateTyping (object) {
   }, TYPING_TIMER_LENGTH);
 }
 
+// First Page
+app.get('/',function(req,res){
+  console.log("Welcome to my Tagusjob.com");
+});
+
 // channel new post
 app.post('/NewPost', function(req, res){
   console.log("/NewPost");
