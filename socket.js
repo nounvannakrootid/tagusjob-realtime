@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Origin", "https://uat-ocp.wooribank.com.kh");
     res.setHeader("Access-Control-Allow-Credentials", "true");
     res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
     res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-CSRF-TOKEN");
@@ -30,11 +30,13 @@ app.get('/',function(req,res){
 });
 
 // Refresh Amount MB
-app.post('/RefreshAmount/:AccountID',function(req,res){
-  console.log("/RefreshAmount/"+req.params.AccountID);
-  var results = req.query;
-  io.emit('RefreshAmount-'+req.params.AccountID,results);
-  res.end();
+app.post('/RefreshAmount/:AccountID',function(res,req){
+  console.log("/RefreshAmount/"+res.params.AccountID);
+  var results = res.body;
+  console.log("Status Code: " + req.statusCode);
+  console.log(results);
+  io.emit('RefreshAmount-'+res.params.AccountID,results);
+  req.end();
 });
 
 http.listen(3000, function(){
